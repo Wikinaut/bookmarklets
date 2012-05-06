@@ -1,16 +1,27 @@
 /*
  * ANS jQuery Bookmarklet launcher (v.3.0)
  *
- * A navalla suíza (http://idc.anavallasuiza.com/project/bookmarklet/)
+ * A Navalla Suíza (http://idc.anavallasuiza.com/project/bookmarklet/)
  *
  * Released under the Creative Commons Attribution 3.0 Unported License,
  * as defined here: http://creativecommons.org/licenses/by/3.0/
+ */
+ 
+/*
+ * Embedded below is (template).min.js, the minified version of (template).js
+ *
+ * Copyright (c) 2011-2012 T. Gries
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
  */
 
 window.bookmarklet = {
 	css: {},
 	js: {},
-	jQuery: false,
+	jquery: false,
 
 	launch: function (file) {
 		if (!file) {
@@ -153,3 +164,28 @@ window.bookmarklet = {
 		this.jQuery = false;
 	}
 };
+
+window.bookmarklet.executeMyBookmarklet = function () {
+	var options = {
+		js: [
+			/* Examples */
+			/* library for DOM-global regular expression string matching and replacements */
+			/* 'http://svn.wikimedia.org/svnroot/mediawiki/trunk/tools/viaf/jquery.ba-replacetext.min.js', */
+			
+			/* load the JSON library for old browsers like IE8.0 */
+			/* 'http://svn.wikimedia.org/svnroot/mediawiki/trunk/tools/viaf/json2.min.js', */
+		],
+		jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+		ready:	function ($) {
+
+				/* add here the minified version (template).min.js
+				   or the unminified version of your (template).js */
+
+				/* YOUR SCRIPT */
+
+
+				window.bookmarklet.die();
+			}
+	};
+	window.bookmarklet.execute(options);
+}

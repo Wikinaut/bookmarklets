@@ -1,7 +1,8 @@
-Bookmarklets framework (v.1.0)
+Bookmarklets framework
 
-2011. Created by Oscar Otero (http://oscarotero.com / http://anavallasuiza.com)
+A simple javascript framework focused to easily create bookmarklets.
 
-Bookmarklets is a simple javascript framework focused to create bookmarklets easily.
-Bookmarklets is released under the GNU Affero GPL version 3.
-More information at http://www.gnu.org/licenses/agpl-3.0.html
+(c) Oscar Otero http://oscarotero.com http://anavallasuiza.com
+
+Released under the GNU Affero GPL version 3.
+http://www.gnu.org/licenses/agpl-3.0.html
